@@ -1,0 +1,119 @@
+
+:root {
+    --colorBarra: #40BCFE;
+    --blanco: #FFFFFF;
+
+    --fuenteParrafos: 'Roboto', sans-serif;
+    --fuenteTitulos: 'Roboto Condensed', sans-serif;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
+
+/* Generales */
+
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuenteParrafos);
+    background-color: var(--blanco);
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
+
+
+/* Globales */
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuenteTitulos);
+}
+
+.contenedor {
+    margin: 0 auto;
+    margin-top: 15rem;
+    max-width: 120rem;
+    width: 90%;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
+/* Header */
+
+.barra {
+    background-color: var(--colorBarra);
+}
+
+
+.contenedor__barra {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.contenedor__barra a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--blanco);
+}
