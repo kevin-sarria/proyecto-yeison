@@ -7,6 +7,10 @@ if(!isset($_POST['buscar'])){
     $_POST['buscar']= "";
 
     $buscar = $_POST['buscar'];
+
+    if($buscar == "") {
+        echo '<p class="mensaje">Da click en buscar para que aparezcan datos</p>';
+    }
 }
 
 $conexion = Conex::conectar();

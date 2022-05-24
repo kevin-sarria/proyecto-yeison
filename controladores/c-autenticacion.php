@@ -13,7 +13,7 @@
 
     if (($r->num_rows) == 1)
     {
-        session_start() ;
+        session_start();
 
         $_SESSION["login"]=$_POST["usuario"]; 
 

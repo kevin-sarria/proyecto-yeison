@@ -26,12 +26,14 @@
 
         <div class="contenedor__barra">
             
-            <img src="" alt="Logo Hospital">
+            <img src="/proyecto-yeison/img/logo.png" alt="Logo Hospital">
 
             <nav>
-                <?php !$_SESSION['login'] ? '<a href="#">Iniciar Sesión</a>' : '' ?>
-                <a href="#">Historial</a>
-                <a href="#">Cerrar Sesión</a>
+                <?php if(!isset($_SESSION['login'])) { echo "<a href='/proyecto-yeison/vistas/iniciar-sesión.php'>Iniciar Sesión</a>"; } ?>
+
+                <?php if(isset($_SESSION['login'])) { echo "<a href='#'>Historial</a>"; } ?>
+
+                <?php if(isset($_SESSION['login'])) { echo "<a href='#'>Cerrar Sesión</a>"; } ?>
             </nav>
         </div>
 

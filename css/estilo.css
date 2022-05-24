@@ -1,7 +1,10 @@
 
 :root {
-    --colorBarra: #40BCFE;
+    --colorBarra: #528fff;
     --blanco: #FFFFFF;
+    --azulBoton: rgb(48, 162, 197);
+    --colorTitulos: #E74C3C;
+    --grisTextoMensaje: rgb(126, 126, 126);
 
     --fuenteParrafos: 'Roboto', sans-serif;
     --fuenteTitulos: 'Roboto Condensed', sans-serif;
@@ -88,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contenedor {
     margin: 0 auto;
-    margin-top: 15rem;
+    margin-top: 2rem;
     max-width: 120rem;
     width: 90%;
 }
@@ -112,8 +115,112 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 90%;
 }
 
-.contenedor__barra a {
+.contenedor__barra img {
+    max-width: 8rem;
+}
+
+.contenedor__barra nav {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor__barra nav a {
     font-size: 2rem;
     margin: 0 1rem;
     color: var(--blanco);
 }
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
+
+/* Index */
+
+.centrar-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    padding: 3rem;
+}
+
+.formulario input[type="text"],
+.formulario button {
+    display: block;
+    margin: 2rem auto;
+}
+
+.formulario input[type="text"] {
+    font-size: 2rem;
+    width: 40rem;
+}
+
+.formulario button {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--azulBoton);
+    color: var(--blanco);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.formulario button:hover {
+    background-color: var(--colorBarra);
+    transition: all 0.3s ease-out;
+}
+
+
+/* Tabla */
+
+.mensaje {
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--grisTextoMensaje);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.tabla {
+    width: 120rem;
+}
+
+.tabla thead th {
+    color: var(--colorTitulos);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
