@@ -1,4 +1,3 @@
-
 <div class="centrar-flex">
       <!--inicia formulario-->
       <form action="" method="POST" class="formulario">
@@ -8,7 +7,7 @@
             <!--envia la información que se encuentra en el input para realisar la consulta en la base de datos con lo que se quiere buscar-->
             <button>Buscar</button>
             <!--fin de formulario-->
-</form>
+      </form>
 </div>
 
 <div class="contenedor__tabla centrar-flex">
@@ -16,14 +15,19 @@
       <table class="tabla">
 
             <?php
-                  if($_SERVER['REQUEST_METHOD'] === 'POST') {
-                     if( $_POST['buscar'] == '' ) {
+
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                  if ($_POST['buscar'] == '') {
+
+                  echo '<p class="mensaje">Por favor ingrese información</p>';
+                  return;
+
+                  } else if ( !is_int($_POST['buscar']) ) {
 
                         echo '<p class="mensaje">Por favor ingrese información</p>';
+                        return;
 
-                        //if(!is_int($_POST['buscar'])) { echo 'no es entero'; };
-
-                     }else if(!$_POST['buscar'] == '') {
+                  } else if (is_int((int)$_POST['buscar'])) {
                         echo "<thead>
                      <th>CEDULA</th>
                      <th>NOMBRE</th>
@@ -33,17 +37,17 @@
                      <th>PRIMA DE NAVIDAD</th>
                      <th>AÑO</th>
                         </thead>";
-
-                     } else {
-                           exit;
-                     }
+                  
+                        return;
                   }
+            }
+
             ?>
-            
+
             <!--se incluye la consulta e imprime en pantalla los datos buscados-->
             <?php
             include "buscar.php";
-            while($row = mysqli_fetch_array($sql_query)) {
+            while ($row = mysqli_fetch_array($sql_query)) {
             ?>
                   <tr>
                         <td data-label="CEDULA:"><?= $row['CEDULA'] ?></td>
