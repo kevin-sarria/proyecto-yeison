@@ -1,9 +1,9 @@
 
 :root {
-    --colorBarra: #528fff;
+    --colorBarra: #E74C3C;
     --blanco: #FFFFFF;
-    --azulBoton: rgb(48, 162, 197);
-    --colorTitulos: #E74C3C;
+    --azulBoton:  #f34431 /*rgb(48, 162, 197)*/;
+    --colorTitulos: #528fff;
     --grisTextoMensaje: rgb(126, 126, 126);
 
     --fuenteParrafos: 'Roboto', sans-serif;
@@ -148,15 +148,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3rem;
 }
 
-.formulario input[type="text"],
+.formulario input,
 .formulario button {
     display: block;
     margin: 2rem auto;
 }
 
-.formulario input[type="text"] {
+.formulario input {
     font-size: 2rem;
-    width: 40rem;
+    min-width: 10rem;
+    width: 30rem;
+    
 }
 
 .formulario button {
@@ -183,6 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--grisTextoMensaje);
     font-weight: bold;
     font-size: 2rem;
+    padding: 1rem;
 }
 
 .tabla {

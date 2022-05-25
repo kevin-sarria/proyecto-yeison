@@ -2,7 +2,7 @@
 // consulta para realizar la busqueda en la base de datos, de la  solicitada por el usuario en la barra de busqueda
 //incluimos la conexión 
 //include '../class/conexion.php';
-if(!isset($_POST['buscar'])){
+/*if(!isset($_POST['buscar'])){
 
     $_POST['buscar']= "";
 
@@ -21,4 +21,4 @@ $SQL_READ="SELECT tbl_productos.CEDULA,tbl_productos.NOMBRE,tbl_productos.CARGO,
 FROM tbl_productos 
 WHERE CEDULA LIKE '$buscar'";
 
-$sql_query = mysqli_query($conexion, $SQL_READ);
+$sql_query = mysqli_query($conexion, $SQL_READ);*/
