@@ -1,13 +1,21 @@
-
 :root {
     --colorBarra: #E74C3C;
-    --blanco: #FFFFFF;
-    --azulBoton:  #f34431 /*rgb(48, 162, 197)*/;
-    --colorTitulos: #528fff;
+    --colorBotones: #f34431;
+    --azulBotones: #4e6eff;
+    --azulBotonesHover: #4265ff;
+    --colorDanger: rgb(255, 38, 38);
+    --colorDangerHover: rgb(253, 51, 51);
+    --NaranjaCancelar: #f0a432;
+    --NaranjaCancelarHover: #f7ab3a;
+
+    --colorTitulos: #4283fc;
     --grisTextoMensaje: rgb(126, 126, 126);
+    --blanco: #FFFFFF;
 
     --fuenteParrafos: 'Roboto', sans-serif;
     --fuenteTitulos: 'Roboto Condensed', sans-serif;
+
+    --sombraCajas: 2px 2px 5px 1px rgb(153, 153, 153);
 }
 
 
@@ -23,10 +31,13 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /* 1 rem = 10px */
+    font-size: 62.5%;
+    /* 1 rem = 10px */
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -48,7 +59,7 @@ body {
 
 /* Globales */
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -85,7 +96,12 @@ p {
     font-weight: 100;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--fuenteTitulos);
 }
 
@@ -99,6 +115,22 @@ h1, h2, h3, h4, h5, h6 {
 /*----------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------*/
+
+/* Utilidades */
+
+
+.centrar-flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
 
 /* Header */
 
@@ -141,11 +173,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Index */
 
-.centrar-flex {
-    display: flex;
-    justify-content: center;
-}
-
 .formulario {
     padding: 3rem;
 }
@@ -165,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 .formulario input[type="submit"] {
     font-size: 2rem;
     cursor: pointer;
-    background-color: var(--azulBoton);
+    background-color: var(--colorBotones);
     color: var(--blanco);
     padding: 1rem;
     border: none;
@@ -211,13 +238,13 @@ h1, h2, h3, h4, h5, h6 {
 .contenedor-formulario {
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px 1px rgb(153, 153, 153);
+    box-shadow: var(--sombraCajas);
     margin: 5rem 0;
 }
 
 .contenedor-formulario h3 {
     margin: 0;
-    color: var(--azulBoton);
+    color: var(--colorBotones);
 }
 
 .volver img {
@@ -225,6 +252,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 4rem;
     margin-left: 1rem;
     margin-bottom: -5rem;
+}
+
+.volver img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
 }
 
 @media(min-width: 768px) {
@@ -240,20 +272,139 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.formulario label {
+    color: var(--colorTitulos);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
 
 
 /*----------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Sección importar DataBase y eliminar DataBase */
+
+
+.contenedor-formularios-admin {
+    display: block;
+    margin: 5rem auto;
+}
+
+@media(min-width: 768px) {
+    .contenedor-formularios-admin {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.upload-DB,
+.clean-DB {
+    border-radius: 1rem;
+    box-shadow: var(--sombraCajas);
+    margin: 5rem auto;
+    height: max-content;
+}
+
+
+.clean-DB input[type="submit"] {
+    margin: 1rem auto;
+}
+
+.upload-DB h3 {
+    font-size: 2rem;
+    border-bottom: 1px solid #888888;
+    margin: 0 auto;
+    color: var(--colorTitulos);
+}
+
+
+#btn-subir {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+
+label[for="btn-subir"] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--azulBotones);
+    transition: all .5s;
+    cursor: pointer;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    display: block;
+    margin: 5rem auto;
+    border-radius: 0.3rem;
+}
+
+label[for="btn-subir"]:hover {
+    background-color: var(--azulBotonesHover);
+}
+
+.cortina-negra {
+    position: fixed;
+    background-color: #0000007e;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.mensaje-error-admin {
+    display: block;
+    background-color: var(--blanco);
+    width: fit-content;
+    height: 20rem;
+    padding: 2rem 3rem;
+    margin: 10rem auto;
+    border-radius: 1rem;
+}
+
+.mensaje-error-admin h4 {
+    color: var(--colorDanger);
+}
+
+.mensaje-error-admin a {
+    display: inline-block;
+    width: fit-content;
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.6rem;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cerrar {
+    background-color: var(--NaranjaCancelar);
+}
+
+.cerrar:hover {
+    background-color: var(--NaranjaCancelarHover);
+}
+
+.delete {
+    background-color: var(--colorDanger);
+}
+
+.delete:hover {
+    background-color: var(--colorDangerHover);
+}

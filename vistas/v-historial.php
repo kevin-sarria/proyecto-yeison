@@ -5,7 +5,7 @@
             <input type="number" id="buscar" name="buscar" placeholder="Buscar Registro" />
             <!--cerramos input-->
             <!--envia la información que se encuentra en el input para realisar la consulta en la base de datos con lo que se quiere buscar-->
-            <button>Buscar</button>
+            <input type="submit" value="Buscar">
             <!--fin de formulario-->
       </form>
 </div>
