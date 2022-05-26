@@ -148,20 +148,24 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3rem;
 }
 
-.formulario input,
-.formulario button {
+.formulario input[type="number"],
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
+.formulario input[type="submit"] {
     display: block;
     margin: 2rem auto;
 }
 
-.formulario input {
+.formulario input[type="number"],
+.formulario input[type="text"] {
     font-size: 2rem;
     min-width: 10rem;
     width: 30rem;
     
 }
 
-.formulario button {
+.formulario input[type="submit"] {
     font-size: 2rem;
     cursor: pointer;
     background-color: var(--azulBoton);
@@ -171,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0.3rem;
 }
 
-.formulario button:hover {
+.formulario input[type="submit"]:hover {
     background-color: var(--colorBarra);
     transition: all 0.3s ease-out;
 }
@@ -206,8 +210,21 @@ h1, h2, h3, h4, h5, h6 {
 /*----------------------------------------------------------------------------------------------*/
 
 
+/* Iniciar sesión */
 
+.contenedor-formulario {
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px 1px rgb(153, 153, 153);
+    margin-top: 3rem;
+}
 
+.contenedor-formulario h3 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: var(--azulBoton);
+}
 
 
 
