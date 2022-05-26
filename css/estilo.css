@@ -104,6 +104,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .barra {
     background-color: var(--colorBarra);
+    width: 100%;
+    margin: 0;
 }
 
 
@@ -148,21 +150,16 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3rem;
 }
 
-.formulario input[type="number"],
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="password"],
-.formulario input[type="submit"] {
+.formulario input {
     display: block;
-    margin: 2rem auto;
+    margin: 0 auto;
+    margin-bottom: 4rem;
 }
 
 .formulario input[type="number"],
 .formulario input[type="text"] {
     font-size: 2rem;
-    min-width: 10rem;
-    width: 30rem;
-    
+    width: 90%;
 }
 
 .formulario input[type="submit"] {
@@ -211,21 +208,37 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Iniciar sesión */
-
 .contenedor-formulario {
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 1rem;
     box-shadow: 2px 2px 5px 1px rgb(153, 153, 153);
-    margin-top: 3rem;
+    margin: 5rem 0;
 }
 
 .contenedor-formulario h3 {
     margin: 0;
-    display: flex;
-    justify-content: center;
     color: var(--azulBoton);
 }
 
+.volver img {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+    margin-bottom: -5rem;
+}
+
+@media(min-width: 768px) {
+    .volver img {
+        margin-left: 5rem;
+    }
+}
+
+
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    font-size: 2rem;
+    width: 100%;
+}
 
 
 

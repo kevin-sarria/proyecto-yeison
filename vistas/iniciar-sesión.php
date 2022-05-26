@@ -2,14 +2,16 @@
   include('./header.php');
 ?>
 
+
+<a href="../index.php" class="volver"><img src="/proyecto-yeison/img/volver.png" alt="Volver"></a>
+
 <section class="centrar-flex">
+
 
   <div class="contenedor-formulario">
     <!--realizamos un formulario el cual nos sirve para comprobar la información ingresada con la que se encuentra alojada a la base de datos-->
 
-    <a href="../index.php" class="volver"><img src="/proyecto-yeison/img/volver.png" alt="Volver"></a>
-
-    <h3>Iniciar Sesión</h3>
+    <h3 class="centrar-flex">Iniciar Sesión</h3>
 
     <form action="../controladores/c-autenticacion.php" method="POST" class="formulario">
 
@@ -25,3 +27,7 @@
   </div>
 
 </section>
+
+<?php
+  include('./footer.php');
+?>
