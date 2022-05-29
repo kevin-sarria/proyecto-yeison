@@ -31,7 +31,7 @@
             <nav>
                 <?php if(!isset($_SESSION['login'])) { echo "<a href='/proyecto-yeison/vistas/iniciar-sesión.php'>Iniciar Sesión</a>"; } ?>
 
-                <?php if(isset($_SESSION['login'])) { echo "<a href='/proyecto-yeison/controladores/c-buscar2.php'>Historial</a>"; } ?>
+                <?php if(isset($_SESSION['login'])) { echo "<a href='/proyecto-yeison/vistas/v-historial-admin.php'>Historial</a>"; } ?>
 
                 <?php if(isset($_SESSION['login'])) { echo "<a href='/proyecto-yeison/vistas/cierre.php'>Cerrar Sesión</a>"; } ?>
             </nav>

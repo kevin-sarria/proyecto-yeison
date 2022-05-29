@@ -33,7 +33,7 @@
                         $conexion = Conex::conectar();
 
                         //esta es la consula que se realiza 
-                        $SQL_READ="SELECT CEDULA, NOMBRE, CARGO, SALDO, CESANTIA, PNAVIDAD, fecha FROM tbl_productos WHERE CEDULA LIKE '%$buscar%';";
+                        $SQL_READ="SELECT CEDULA, NOMBRE, CARGO, SALDO, CESANTIA, PNAVIDAD, fecha FROM tbl_productos WHERE CEDULA LIKE '$buscar';";
 
                         $resultado = mysqli_query($conexion, $SQL_READ);
                         
